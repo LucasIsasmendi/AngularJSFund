@@ -1,0 +1,14 @@
+{
+  "name": "angular-seed-0.10.x",
+  "version": "0.0.0",
+  "description": "course AngularJS Fundamentals 2013",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lucas Isasmendi",
+  "license": "ISC"
+}
