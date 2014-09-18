@@ -5,8 +5,20 @@
   "main": "index.js",
   "directories": {
     "test": "test"
+  },  
+  "engine":{
+    "node":"0.10.25",
+    "npm":"1.3.24"
   },
+  "dependencies":{
+    "events":"*",
+    "fs":"*",
+    "http":"*",
+    "sys":"*",
+    "url":"*"
+  }, 
   "scripts": {
+    "start": "node web-server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Lucas Isasmendi",
