@@ -1,7 +1,15 @@
-eventsApp.factory('eventData', function ($resource) {
+eventsApp.factory('eventData', function ($resource, $q) {
 	return {
 		getEvent: function () {
-			return $resource('/app/data/event/:id', {id:'@id'}).get({id:1});
+			var deferred = $q.defer();
+			$resource('/app/data/event/:id', {id:'@id'})
+				.get({id:1}, function (event) {
+					deferred.resolve(event);
+				},
+				function (response) {
+					deferred.reject(response);
+				});
+			return deferred.promise;
 		}
 	};
 });
