@@ -1,27 +1,25 @@
 <!doctype html>
-<<html lang="en" ng-app="eventsApp">
+<html lang="en" ng-app="eventsApp">
 <head>
 	<meta charset="utf-8">
-	<title>Cache Sample</title>
+	<title>Locale Sample</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/app.css">
 </head>
 <body>
 <div class="container">
-	<div ng-controller="CompileSampleController" style="...">
-		<div id="appendHere"></div>
-		<br/>
-		name:<input type="text" ng-model="name"><br/>
-		markup: <input type="text" ng-model="markup"><br/>
-		<button class="btn" ng-click="appendDivToElement(markup)">Append</button>
+	<div ng-controller="LocaleSampleController" style="padding:20px;">
+		<h3>{{ myDate| date:myFormat }}</h3>
 	</div>
 </div>
 
 <script src="lib/jquery.min.js"></script>
 <script src="lib/angular/angular.js"></script>
 <script src="lib/angular/angular-resource.js"></script>
+<script src="lib/angular/angular-locale_es.js"></script>
 <script src="js/app.js"></script>
-<script src="js/controllers/CompileSampleController.js"></script>
+<script src="js/controllers/LocaleSampleController.js"></script>
 <script src="lib/bootstrap.min.js"></script>
+
 </body>
 </html>
