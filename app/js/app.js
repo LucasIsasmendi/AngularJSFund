@@ -15,9 +15,17 @@ var eventsApp = angular.module('eventsApp', ['ngResource'])
 		$routeProvider.when('/event/:eventId',
 			{
 				templateUrl: 'templates/EventDetails.html',
-				controller: 'EventController'
+				controller: 'EventController',
+				resolve: {
+					event: function($q, $route, evenData) {
+						var deferred = $q.defer();
+						evenData.getEvent($route.current.pathParams.eventId)
+							.then(function(event) {deferred.resolve(event);});
+						return deferred.promise;
+					}
+				}
 			});
 		$routeProvider.otherwise({redirectTo: '/events'});
-		
+
 	});
 
