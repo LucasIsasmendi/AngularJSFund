@@ -1,26 +1,9 @@
-<!doctype html>
-<html lang="en" ng-app="eventsApp">
-<head>
-	<meta charset="utf-8">
-	<title>Event Registration</title>
-	<link rel="stylesheet"  href="css/bootstrap.min.css">
-	<link rel="stylesheet"  href="css/app.css">
-</head>
-<body>
-<div class="container">
-	<div class="navbar">
-		<div class="navbar-inner">
-			<ul class="nav">
-
-			</ul>
-		</div>
-	</div>
-	<style>input.ng-invalid.ng-dirty {background-color: pink;}</style>
-	<div ng-controller="EditEventController" style="padding-left:20px; padding-right:20px">
+<div style="padding-left:20px; padding-right:20px">
 		<div class="container">
-			<h1>New Event</h1>
+			<h1 nh-hide="editingEvent">New Event</h1>
+			<h1 nh-show="editingEvent">Edit Event</h1>
 			<hr />
-			<form name="newEventForm">
+			<form name="editEventForm">
 				<fieldset>
 					<label for="eventName">Event Name:</label>
 					<input id="eventName" type="text" required ng-model="event.name" placeholder="Name of your event..." />
@@ -42,22 +25,8 @@
 				<br />
 				<br />
 
-				<button type="submit" ng-disabled="newEventForm.$invalid" ng-click="saveEvent(event, newEventForm)" class="btn btn-primary">Save</button>
+				<button type="submit" ng-click="saveEvent(event, editEventForm)" class="btn btn-primary">Save</button>
 				<button type="button" ng-click="cancelEdit()" class="btn btn-default">Cancel</button>				
 			</form>
 		</div>
-	</div>
 </div>
-<script src="lib/jquery.min.js"></script>
-<script src="lib/underscore-1.4.4.min.js"></script>
-<script src="lib/bootstrap.min.js"></script>
-<script src="lib/angular/angular.js"></script>
-<script src="lib/angular/angular-resource.js"></script>
-<script src="js/app.js"></script>
-<script src="js/controllers/EventController.js"></script>
-<script src="js/controllers/EditEventController.js"></script>
-<script src="js/services/EventData.js"></script>
-<script src="js/filters.js"></script>
-
-</body>
-</html>
