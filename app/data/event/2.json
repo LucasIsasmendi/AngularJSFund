@@ -1,4 +1,4 @@
-{
+{	"id":2,"creator":"Lucas Isasmendi",
 			"name": "Angular Boot Camp",
 			"date": "1/1/2015",
 			"time": "10:30 am",
@@ -7,7 +7,7 @@
 				"city": "Buenos Aires",
 				"province": "Buenos Aires"
 			},
-			"imageUrl": "/app/img/logos_mod4.png",
+			"imageUrl": "/img/logos_mod4.png",
 			"sessions": [
 				{
 					"name": "Directives Masterclass",
