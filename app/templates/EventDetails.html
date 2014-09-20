@@ -1,9 +1,7 @@
 <div style="padding-left:20px; padding-right:20px">
 		<img ng-src="{{event.imageUrl}}" alt="{{event.name}}"/>
-        <br />
-        <br />		
-		
-		<button type="button" class="btn btn-primary" ng-click="scrollToSession()">Scroll</button>
+		<br/>
+		<button class="btn" ng-click="reload()">Reload</button>
 		<div class="row">
 			<div class="span11">
 				<h2 ng-bind="event.name"></h2>
