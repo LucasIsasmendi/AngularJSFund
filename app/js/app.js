@@ -16,6 +16,7 @@ var eventsApp = angular.module('eventsApp', ['ngResource'])
 			{
 				templateUrl: 'templates/EventDetails.html',
 				controller: 'EventController'
-			});		
+			});
+		$routeProvider.otherwise({redirectTo: '/events'});
 	});
 
