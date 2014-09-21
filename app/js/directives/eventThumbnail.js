@@ -3,6 +3,9 @@
 eventsApp.directive('eventThumbnail', function() {
 	return {
 		restrict: 'E',
-		templateUrl: '/templates/directives/eventThumbnail.html'
+		templateUrl: '/templates/directives/eventThumbnail.html',
+		scope: {
+			event:"=event"
+		}
 	}
 });
