@@ -1,4 +1,5 @@
 <div style="padding-left:20px; padding-right:20px">
+	<div class="container">
 		<img ng-src="{{event.imageUrl}}" alt="{{event.name}}"/>
 		<br/>
 		<button class="btn" ng-click="reload()">Reload</button>
@@ -38,17 +39,8 @@
 		<ul class="thumbails">
 			<li ng-repeat="session in event.sessions | orderBy:sortorder | filter:query" class="span11" id="session{{session.id}}">
 				<div class= "row session">
-					<div class="span0 well votingWidget">
-						<div class="votingButton" ng-click="upVoteSession(session)">
-							<i class="icon-chevron-up icon-white"></i>
-						</div>
-						<div class="badge badge-inverse">
-							<div>{{session.upVoteCount}}</div>
-						</div>
-						<div class="votingButton" ng-click="downVoteSession(session)">
-							<i class="icon-chevron-down icon-white"></i>
-						</div>					
-					</div>					
+					<upvote upvote="upVoteSession(session)" downvote="downVoteSession(session)" count="session.upVoteCount"/>
+			
 					<div class="well span9">
 						<h4 class="well-title">{{session.name}}</h4>
 						<h6 style="margin-top:-10px">{{session.creatorName}}</h6>
@@ -59,4 +51,5 @@
 				</div>
 			</li>
 		</ul>
+	</div>
 </div>

@@ -13,9 +13,5 @@ eventsApp.controller('EventController',
 			session.upVoteCount--;
 		};
 
-		$scope.reload = function(){
-			$route.reload();
-		}
-
 	}
 );

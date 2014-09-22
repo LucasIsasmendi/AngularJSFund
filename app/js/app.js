@@ -20,7 +20,7 @@ var eventsApp = angular.module('eventsApp', ['ngResource'])
 					event: function($q, $route, eventData) {
 						var deferred = $q.defer();
 						eventData.getEvent($route.current.pathParams.eventId)
-							.then(function(event) {deferred.resolve(event);});
+							.then(function(event) { deferred.resolve(event); });
 						return deferred.promise;
 					}
 				}
